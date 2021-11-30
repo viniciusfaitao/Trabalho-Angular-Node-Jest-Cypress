@@ -8,5 +8,4 @@ router.delete('/api/veterinary/:id', controller.deleteById);
 router.get('/api/veterinary/:id', controller.getById);
 router.get('/api/veterinary', controller.getAll);
 
-
 module.exports = router;
