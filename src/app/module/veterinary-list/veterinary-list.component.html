@@ -1,0 +1,32 @@
+<h2>Veterinary List</h2>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Filter by:</label>
+  <div class="col-sm-10">
+    <input [(ngModel)]="filter" class="form-control" />
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th>Image</th> -->
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Celular</th>
+      <th>Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let veterinary of filteredVeterinary">
+      <td>{{ veterinary.name }}</td>
+      <td>{{ veterinary.email }}</td>
+      <td>{{ veterinary.phone}}</td>
+      <td>
+        <a [routerLink]="['/veterinary/info', veterinary.id]" class="btn btn-primary">Edit</a>
+        <button (click)="deleteById(veterinary.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+  <a [routerLink]="['/veterinary/info']" class="btn btn-primary">New veterinary</a>
+</table>
