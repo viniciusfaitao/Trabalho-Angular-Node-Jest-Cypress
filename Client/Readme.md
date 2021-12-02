@@ -15,6 +15,10 @@ Execute a aplicação
 
 ### `npm start`
 
+Para ver no browser entre em
+
+http://localhost:4200/
+
 ## Testando aplicação com Cypress
 
 Esteja na pasta principal
