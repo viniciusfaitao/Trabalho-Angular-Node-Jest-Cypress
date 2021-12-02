@@ -1,7 +1,7 @@
 # Client
 `Infomações para utilizar a aplicação`
 
-## Instalação e executando aplicação
+## Instalando e executando aplicação
 
 Esteja na pasta principal
 
