@@ -17,6 +17,11 @@
 • Jean Paul Fonseca Lopes
 
 
-## Instalações e uso 
+## Usando a aplicação
 
-### `Veja o README.md de cada pasta (Client e Server)`
+Clone o repositório
+
+### `git clone https://github.com/viniciusfaitao/Trabalho-Angular-Node-Jest-Cypress.git`
+
+
+### `Veja o README.md de cada pasta para saber como rodar a aplicação (Client e Server)`
