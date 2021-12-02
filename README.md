@@ -8,9 +8,15 @@
 ### Processos e tecnologias utilizadas:
 • Angular. :heavy_check_mark: <br/>
 • Node.JS. :heavy_check_mark: <br/>
-• Heroku CLI. :heavy_check_mark: <br/>
+• Jest. :heavy_check_mark: <br/>
+• Cypress. :heavy_check_mark: <br/>
 • Versionamento em repositório público (Github). :heavy_check_mark: <br/>
 
 ### Matéria e professor:
 • Práticas de Engenharia de Software <br/>
 • Jean Paul Fonseca Lopes
+
+
+## Instalações e uso 
+
+### `Veja o README.md de cada pasta (Client e Server)`
