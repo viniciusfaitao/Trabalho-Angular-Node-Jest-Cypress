@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { Contact } from 'src/app/shared/models/contact';
 import { VeterinaryService } from 'src/app/shared/services/veterinary-service/veterinary.service'
 
@@ -19,7 +19,7 @@ export class VeterinaryInfoComponent implements OnInit {
   paramId: number;
   isANewVeterinary: boolean = false;
 
-  constructor(private activatedRoute: ActivatedRoute, private veterinaryService: VeterinaryService) { }
+  constructor(private activatedRoute: ActivatedRoute, private veterinaryService: VeterinaryService, private router: Router) { }
 
   ngOnInit(): void {
     this.paramId = +this.activatedRoute.snapshot.paramMap.get('id');
@@ -38,7 +38,7 @@ export class VeterinaryInfoComponent implements OnInit {
 
   save(): void {
     this.veterinaryService.save(this.veterinary).subscribe({
-      next: veterinary => console.log('Saved with sucess', veterinary.id),
+      next: veterinary => { console.log('Saved with sucess', veterinary.id), this.router.navigate(['/veterinary']) },
       error: err => console.log('Error', err),
     })
   }

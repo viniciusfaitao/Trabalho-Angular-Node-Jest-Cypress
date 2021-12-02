@@ -21,23 +21,10 @@ const putById = ((request, response) => {
   const veterinaryId = +request.params['id']
   const veterinary = request.body
 
-  if (veterinaryId) {
-    const index = VETERINARY.findIndex(veterinaryIterator => veterinaryIterator.id === veterinaryId)
-    VETERINARY[index] = veterinary
+  const index = VETERINARY.findIndex(veterinaryIterator => veterinaryIterator.id === veterinaryId)
+  VETERINARY[index] = veterinary
 
-    response.status(200).send(veterinary)
-  } else {
-    const firstId = VETERINARY
-      ? Math.max.apply(
-        null,
-        VETERINARY.map(veterinaryIterator => veterinaryIterator.id)
-      ) + 1
-      : 1
-    veterinary.id = firstId
-    VETERINARY.push(veterinary)
-
-    response.status(201).send(veterinary)
-  }
+  response.status(200).send(veterinary)
 })
 
 const getById = ((request, response) => {

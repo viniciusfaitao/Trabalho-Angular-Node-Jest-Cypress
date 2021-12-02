@@ -18,7 +18,7 @@
   <div class="form-group row">
     <label class="col-sm-2 col-form-label">Email:</label>
     <div class="col-sm-10">
-      <input [(ngModel)]="veterinary.email" required name="price" #veterinaryEmail="ngModel"
+      <input [(ngModel)]="veterinary.email" required name="email" #veterinaryEmail="ngModel"
         [ngClass]="{ 'is-invalid': veterinaryEmail.invalid }" class="form-control" />
 
       <div class="invalid-feedback">
@@ -30,7 +30,7 @@
   <div class="form-group row">
     <label class="col-sm-2 col-form-label">Phone:</label>
     <div class="col-sm-10">
-      <input [(ngModel)]="veterinary.phone" required name="rating" #veterinaryPhone="ngModel"
+      <input [(ngModel)]="veterinary.phone" required name="phone" #veterinaryPhone="ngModel"
         [ngClass]="{ 'is-invalid': veterinaryPhone.invalid }" class="form-control" />
 
       <div class="invalid-feedback">
@@ -39,6 +39,6 @@
     </div>
   </div>
 
-  <button [disabled]="veterinaryForm.invalid" (click)="save()" class="btn btn-primary mr-2">Save</button>
+  <button id="save-btn" [disabled]="veterinaryForm.invalid" (click)="save()" class="btn btn-primary mr-2">Save</button>
   <button [routerLink]="['/veterinary']" class="btn btn-secondary">Back</button>
 </form>

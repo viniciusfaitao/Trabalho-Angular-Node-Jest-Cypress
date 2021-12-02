@@ -1,5 +1,5 @@
 const express = require('express')
-const routes = require('./app/routes/route');
+const veterinaryRouter = require('./routes/veterinary.routes');
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
@@ -11,9 +11,10 @@ var corsOptions = {
 
 app.use(cors(corsOptions))
 
-app.use(bodyParser.json(), routes)
+app.use(express.json())
 
-port = 3100
-app.listen(port, () => {
-  console.log(`Server started at port ${port}`)
-})
+app.use(bodyParser.json())
+
+app.use(veterinaryRouter)
+
+module.exports = app
