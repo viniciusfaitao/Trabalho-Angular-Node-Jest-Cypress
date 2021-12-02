@@ -21,7 +21,7 @@ Execute a aplicação
 
 Para ver no browser entre em
 
-### `http://localhost:3100/api/veterinary`
+### http://localhost:3100/api/veterinary
 
 ## Testar aplicação com Jest
 
