@@ -1,4 +1,4 @@
-# Client
+# Server
 `Infomações para utilizar a aplicação`
 
 ## Instalando e executando aplicação
